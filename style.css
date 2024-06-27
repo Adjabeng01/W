@@ -53,34 +53,25 @@ main {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-main h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-main p {
-  margin-bottom: 20px;
-}
-
-ul.box {
-  list-style-type: none;
+main ul {
+  list-style-type: none; /* Removed .box class here */
   padding: 0;
 }
 
-ul.box li {
+main ul li {
   margin-bottom: 10px;
 }
 
-ul.box li a {
+main ul li a {
   color: #007bff;
   text-decoration: none;
 }
 
-ul.box li a:hover {
+main ul li a:hover {
   text-decoration: underline;
 }
 
-aside.box {
+aside {
   background-color: #f0f0f0;
   color: #333;
   padding: 20px;
@@ -90,7 +81,7 @@ aside.box {
   position: relative;
 }
 
-aside.box img.profile {
+aside img {
   float: right;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -100,7 +91,7 @@ aside.box img.profile {
   border: 2px solid #ccc;
 }
 
-aside.box h2 {
+aside h2 {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -131,7 +122,7 @@ footer p {
 }
 
 @media (max-width: 576px) {
-  aside.box img.profile {
+  aside img {
       float: none;
       margin: 0 auto 10px;
       display: block;

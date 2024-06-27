@@ -1,25 +1,103 @@
-/* Universal Selector */
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Class Selectors */
-.box {
-  margin: 1rem;
-  padding: 1rem;
-  background-color: #f0f0f0;
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
   color: #333;
+  margin: 20px;
 }
 
-img.profile {
-  float: right;
-  margin-left: 1rem;
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header nav {
+  text-align: center;
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+  background-color: #555;
+}
+
+main {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+main h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+main p {
+  margin-bottom: 20px;
+}
+
+ul.box {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.box li {
+  margin-bottom: 10px;
+}
+
+ul.box li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+ul.box li a:hover {
+  text-decoration: underline;
 }
 
 aside.box {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: relative;
+}
+
+aside.box img.profile {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #ccc;
 }
 
 aside.box h2 {
@@ -28,4 +106,34 @@ aside.box h2 {
   left: 10px;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 5px;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  background-color: #333;
+  color: #fff;
+  clear: both;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header nav ul li {
+      display: block;
+      margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  aside.box img.profile {
+      float: none;
+      margin: 0 auto 10px;
+      display: block;
+  }
 }

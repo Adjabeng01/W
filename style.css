@@ -1,4 +1,4 @@
-/* Reset styles */
+/* Universal Selector */
 * {
   margin: 0;
   padding: 0;
@@ -53,35 +53,29 @@ main {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-main ul {
-  list-style-type: none; /* Removed .box class here */
+main ul.box {
+  list-style-type: none;
   padding: 0;
 }
 
-main ul li {
+main ul.box li {
   margin-bottom: 10px;
 }
 
-main ul li a {
+main ul.box li a {
   color: #007bff;
   text-decoration: none;
 }
 
-main ul li a:hover {
+main ul.box li a:hover {
   text-decoration: underline;
 }
 
-aside {
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+aside.box {
   position: relative;
 }
 
-aside img {
+aside.box img.profile {
   float: right;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -91,7 +85,7 @@ aside img {
   border: 2px solid #ccc;
 }
 
-aside h2 {
+aside.box h2 {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -122,9 +116,18 @@ footer p {
 }
 
 @media (max-width: 576px) {
-  aside img {
+  aside.box img.profile {
       float: none;
       margin: 0 auto 10px;
       display: block;
   }
+}
+
+/* Class Selectors */
+.box {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #e0e0e0;
+  color: #333;
 }
